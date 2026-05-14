@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="dark" lang="fr">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Commande - Royal Pop Bracelet</title>
+    <title>Paiement Sécurisé - Royal Pop Bracelet</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
@@ -13,134 +13,138 @@
             theme: {
                 extend: {
                     "colors": {
-                        "primary": "#000000",
-                        "secondary": "#5f5e5e",
-                        "surface": "#faf9f7",
-                        "outline-variant": "#c4c7c7",
+                        "primary": "#ffffff",
+                        "background": "#131313",
+                        "surface": "#1c1b1b",
+                        "surface-variant": "#2a2a2a",
+                        "outline-variant": "#444748",
                         "royal-blue": "#0055ff"
                     },
                     "fontFamily": {
-                        "headline": ["Bodoni Moda"],
-                        "body": ["Hanken Grotesk"]
+                        "display": ["Bodoni Moda", "serif"],
+                        "body": ["Inter", "sans-serif"]
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { background-color: #131313; color: #e5e2e1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #444748; }
+    </style>
 </head>
-<body class="bg-surface text-black antialiased font-body min-h-screen">
-    <!-- Header -->
-    <header class="bg-surface border-b border-outline-variant/20 sticky top-0 z-50">
-        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-20 w-full max-w-[1440px] mx-auto">
-            <a class="text-xl md:text-2xl font-headline uppercase tracking-tighter" href="index.html">
-                ROYAL POP
-            </a>
-            <div class="text-[11px] font-semibold tracking-widest uppercase text-secondary">PAIEMENT SÉCURISÉ</div>
+<body class="font-body antialiased flex flex-col min-h-screen overflow-x-hidden">
+    <!-- Header Context -->
+    <header class="bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 h-20 flex-shrink-0">
+        <div class="max-w-[1440px] mx-auto px-8 flex justify-between items-center h-full">
+            <a class="font-display text-2xl tracking-tighter text-primary uppercase" href="index.html">ROYAL POP</a>
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-on-surface-variant flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">lock</span>
+                Paiement Sécurisé
+            </div>
         </div>
     </header>
 
-    <main class="max-w-[1440px] mx-auto px-6 md:px-20 py-12 md:py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <!-- Left: Checkout Form -->
-            <div class="lg:col-span-7 space-y-12">
+    <main class="flex-grow flex items-stretch relative">
+        <!-- Background Scrim -->
+        <div class="absolute inset-0 bg-[#0e0e0e] opacity-80 z-0">
+            <img src="hero.png" class="w-full h-full object-cover blur-2xl opacity-20"/>
+        </div>
+
+        <!-- Checkout Container -->
+        <div class="relative z-10 w-full max-w-5xl mx-auto flex flex-col lg:flex-row gap-1 border-x border-outline-variant/20 bg-surface/50 backdrop-blur-3xl shadow-2xl">
+            
+            <!-- Left: Checkout Forms -->
+            <div class="flex-grow p-12 lg:p-20 space-y-16 overflow-y-auto max-h-[80vh] lg:max-h-none scrollbar-hide">
                 <section>
-                    <h2 class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary mb-6">1. Informations de Livraison</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="col-span-1">
-                            <label class="block text-[10px] font-bold uppercase mb-2">Prénom</label>
-                            <input class="w-full bg-white border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="Jean"/>
+                    <h2 class="text-[11px] font-bold tracking-[0.2em] uppercase text-royal-blue mb-8">1. Informations de Livraison</h2>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="text-[9px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Email</label>
+                            <input type="email" class="w-full bg-surface-variant/30 border border-outline-variant/50 focus:border-primary text-primary px-5 py-4 text-sm outline-none transition-all" placeholder="votre@email.com"/>
                         </div>
-                        <div class="col-span-1">
-                            <label class="block text-[10px] font-bold uppercase mb-2">Nom</label>
-                            <input class="w-full bg-white border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="Dupont"/>
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="text-[9px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Téléphone</label>
+                            <input type="tel" class="w-full bg-surface-variant/30 border border-outline-variant/50 focus:border-primary text-primary px-5 py-4 text-sm outline-none transition-all" placeholder="+33 6..."/>
                         </div>
                         <div class="col-span-2">
-                            <label class="block text-[10px] font-bold uppercase mb-2">Adresse</label>
-                            <input class="w-full bg-white border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="123 Rue de la Paix"/>
-                        </div>
-                        <div class="col-span-1">
-                            <label class="block text-[10px] font-bold uppercase mb-2">Code Postal</label>
-                            <input class="w-full bg-white border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="75001"/>
-                        </div>
-                        <div class="col-span-1">
-                            <label class="block text-[10px] font-bold uppercase mb-2">Ville</label>
-                            <input class="w-full bg-white border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="Paris"/>
+                            <label class="text-[9px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Adresse de livraison</label>
+                            <input type="text" class="w-full bg-surface-variant/30 border border-outline-variant/50 focus:border-primary text-primary px-5 py-4 text-sm outline-none transition-all" placeholder="Rue, Ville, Code Postal"/>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h2 class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary mb-6">2. Paiement</h2>
-                    <div class="bg-white border border-outline-variant/30 p-8 space-y-6">
-                        <div class="flex items-center gap-3 border-b border-outline-variant/20 pb-4">
-                            <span class="material-symbols-outlined text-royal-blue">credit_card</span>
-                            <span class="text-sm font-semibold uppercase tracking-widest">Carte Bancaire</span>
+                    <h2 class="text-[11px] font-bold tracking-[0.2em] uppercase text-royal-blue mb-8">2. Paiement</h2>
+                    <div class="bg-surface-variant/20 border border-outline-variant/30 p-10 space-y-8">
+                        <div class="flex items-center gap-4 border-b border-outline-variant/20 pb-6">
+                            <span class="material-symbols-outlined text-primary">credit_card</span>
+                            <span class="text-xs font-bold uppercase tracking-widest">CARTE BANCAIRE</span>
                         </div>
-                        <div class="space-y-6">
+                        <div class="space-y-8">
                             <div>
-                                <label class="block text-[10px] font-bold uppercase mb-2">Numéro de carte</label>
-                                <input class="w-full bg-surface border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="0000 0000 0000 0000"/>
+                                <label class="text-[9px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Numéro de carte</label>
+                                <input type="text" class="w-full bg-background/50 border border-outline-variant/50 focus:border-primary text-primary px-5 py-4 text-sm outline-none transition-all" placeholder="0000 0000 0000 0000"/>
                             </div>
-                            <div class="grid grid-cols-2 gap-6">
+                            <div class="grid grid-cols-2 gap-8">
                                 <div>
-                                    <label class="block text-[10px] font-bold uppercase mb-2">Expiration</label>
-                                    <input class="w-full bg-surface border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="MM / YY"/>
+                                    <label class="text-[9px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">Expiration</label>
+                                    <input type="text" class="w-full bg-background/50 border border-outline-variant/50 focus:border-primary text-primary px-5 py-4 text-sm outline-none transition-all" placeholder="MM / YY"/>
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-bold uppercase mb-2">CVC</label>
-                                    <input class="w-full bg-surface border border-outline-variant/30 px-4 py-3 outline-none focus:border-royal-blue transition-colors" type="text" placeholder="123"/>
+                                    <label class="text-[9px] font-bold tracking-widest uppercase text-on-surface-variant mb-2 block">CVC</label>
+                                    <input type="text" class="w-full bg-background/50 border border-outline-variant/50 focus:border-primary text-primary px-5 py-4 text-sm outline-none transition-all" placeholder="123"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <button class="w-full bg-primary text-white py-6 text-[11px] font-bold tracking-[0.3em] uppercase hover:bg-royal-blue transition-all duration-500">
-                    Confirmer le paiement
+                <button class="w-full bg-primary text-on-primary py-6 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-royal-blue hover:text-white transition-all duration-500 shadow-2xl">
+                    Confirmer la commande
                 </button>
             </div>
 
             <!-- Right: Order Summary -->
-            <div class="lg:col-span-5">
-                <div class="sticky top-32 space-y-8 bg-white border border-outline-variant/20 p-8 md:p-12">
-                    <h2 class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary border-b border-outline-variant/20 pb-4">Récapitulatif</h2>
-                    
-                    <div class="flex gap-6">
-                        <div class="w-24 h-24 bg-surface flex-shrink-0">
-                            <img alt="Product" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=2070&auto=format&fit=crop"/>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <h3 class="text-lg font-headline">Bespoke Royal Strap</h3>
-                            <p class="text-[11px] text-secondary uppercase tracking-widest mt-1">Electric Blue / Silicone</p>
-                            <p class="text-sm font-bold mt-2">145,00 €</p>
-                        </div>
+            <div class="w-full lg:w-[400px] bg-surface-variant/30 p-12 lg:p-16 border-t lg:border-t-0 lg:border-l border-outline-variant/30 flex flex-col gap-12">
+                <h2 class="text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant border-b border-outline-variant/20 pb-4">VOTRE PANIER</h2>
+                
+                <div class="flex gap-6 items-center">
+                    <div class="w-20 h-20 bg-background border border-outline-variant/20 p-2 overflow-hidden flex-shrink-0">
+                        <img src="blue-strap.png" class="w-full h-full object-cover"/>
                     </div>
+                    <div>
+                        <h3 class="font-display text-lg text-primary">Royal Pop Blue</h3>
+                        <p class="text-[9px] uppercase tracking-widest text-on-surface-variant mt-1">Silicone Haute Densité</p>
+                    </div>
+                </div>
 
-                    <div class="space-y-4 pt-8 border-t border-outline-variant/20">
-                        <div class="flex justify-between text-sm text-secondary">
-                            <span>Sous-total</span>
-                            <span>145,00 €</span>
-                        </div>
-                        <div class="flex justify-between text-sm text-secondary">
-                            <span>Livraison</span>
-                            <span class="text-royal-blue">Offerte</span>
-                        </div>
-                        <div class="flex justify-between text-xl font-headline pt-4 border-t border-outline-variant/20">
-                            <span>Total</span>
-                            <span>145,00 €</span>
-                        </div>
+                <div class="space-y-6 pt-8 border-t border-outline-variant/20">
+                    <div class="flex justify-between text-xs text-on-surface-variant">
+                        <span>SOUS-TOTAL</span>
+                        <span>145,00 €</span>
                     </div>
+                    <div class="flex justify-between text-xs text-on-surface-variant">
+                        <span>LIVRAISON</span>
+                        <span class="text-royal-blue">OFFERTE</span>
+                    </div>
+                    <div class="flex justify-between font-display text-2xl text-primary pt-6 border-t border-outline-variant/20">
+                        <span>TOTAL</span>
+                        <span>145,00 €</span>
+                    </div>
+                </div>
 
-                    <div class="flex items-center justify-center gap-2 text-[10px] text-secondary uppercase tracking-widest pt-4">
-                        <span class="material-symbols-outlined text-sm">lock</span>
-                        <span>Paiement 100% Sécurisé</span>
-                    </div>
+                <div class="mt-auto pt-12 flex items-center justify-center gap-2 text-[9px] text-on-surface-variant font-bold uppercase tracking-[0.2em]">
+                    <span class="material-symbols-outlined text-sm">verified_user</span>
+                    Garantie 2 ans incluse
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="py-12 text-center text-[10px] text-secondary uppercase tracking-widest border-t border-outline-variant/20">
+    <footer class="h-20 border-t border-outline-variant/20 flex items-center justify-center text-[9px] font-bold tracking-widest text-on-surface-variant uppercase">
         © 2024 ROYAL POP BRACELET. TOUS DROITS RÉSERVÉS.
     </footer>
 </body>

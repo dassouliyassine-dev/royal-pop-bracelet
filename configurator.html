@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="dark" lang="fr">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Configurateur - Royal Pop Bracelet</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
@@ -13,169 +13,112 @@
             theme: {
                 extend: {
                     "colors": {
-                        "primary": "#000000",
-                        "secondary": "#5f5e5e",
-                        "surface": "#faf9f7",
-                        "background": "#faf9f7",
-                        "outline-variant": "#c4c7c7",
+                        "primary": "#ffffff",
+                        "background": "#131313",
+                        "surface": "#1c1b1b",
+                        "surface-variant": "#2a2a2a",
+                        "outline-variant": "#444748",
                         "royal-blue": "#0055ff",
                         "royal-orange": "#ff6600"
                     },
                     "fontFamily": {
-                        "headline": ["Bodoni Moda"],
-                        "body": ["Hanken Grotesk"]
+                        "display": ["Bodoni Moda", "serif"],
+                        "body": ["Inter", "sans-serif"]
                     }
                 }
             }
         }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
+        body { background-color: #131313; color: #e5e2e1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
         .input-underline {
             border: none;
-            border-bottom: 1px solid #5f5e5e;
-            border-radius: 0;
+            border-bottom: 1px solid #444748;
             background: transparent;
-            padding-left: 0;
-            padding-right: 0;
-            transition: border-color 0.3s ease;
+            border-radius: 0;
+            padding-bottom: 0.5rem;
         }
         .input-underline:focus {
             outline: none;
-            border-bottom: 2px solid #0055ff;
-        }
-        .progress-line {
-            height: 2px;
-            background-color: #e3e2e0;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            right: 0;
-            z-index: 40;
-        }
-        .progress-active {
-            height: 100%;
-            background-color: #0055ff;
-            width: 66%;
-            transition: width 0.5s ease-in-out;
+            border-bottom-color: #ffffff;
         }
     </style>
 </head>
-<body class="bg-surface text-black antialiased flex flex-col font-body">
+<body class="font-body antialiased flex flex-col h-screen overflow-hidden">
     <!-- Header -->
-    <header class="bg-surface sticky top-0 z-50 border-b border-outline-variant/20">
-        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-20 w-full max-w-[1440px] mx-auto">
-            <button class="text-primary hover:text-royal-blue transition-colors duration-300">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-            <a class="text-2xl md:text-3xl font-headline uppercase tracking-tighter" href="index.html">
-                ROYAL POP
-            </a>
-            <button class="text-primary hover:text-royal-blue transition-colors duration-300">
-                <span class="material-symbols-outlined">shopping_bag</span>
-            </button>
+    <header class="bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 h-20 flex-shrink-0">
+        <div class="max-w-[1440px] mx-auto px-8 flex justify-between items-center h-full">
+            <button class="text-primary"><span class="material-symbols-outlined">menu</span></button>
+            <a class="font-display text-2xl tracking-tighter text-primary uppercase" href="index.html">ROYAL POP</a>
+            <button class="text-primary"><span class="material-symbols-outlined">shopping_bag</span></button>
         </div>
     </header>
 
-    <div class="progress-line">
-        <div class="progress-active"></div>
-    </div>
-
-    <main class="flex-grow flex flex-col md:flex-row w-full max-w-[1440px] mx-auto h-[calc(100vh-80px)] overflow-hidden">
-        <!-- Left: Product Preview -->
-        <section class="hidden md:flex md:w-1/2 h-full bg-[#efeeec] items-center justify-center p-16 relative border-r border-outline-variant/20">
-            <div class="relative z-10 text-center">
-                <div class="mb-12">
-                    <img id="watch-preview" alt="Watch Preview" class="w-full max-w-[450px] object-contain drop-shadow-2xl" src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=2070&auto=format&fit=crop"/>
-                </div>
-                <div class="bg-white/80 backdrop-blur-sm px-8 py-6 border border-outline-variant/30 inline-flex flex-col gap-1">
-                    <span class="text-[10px] tracking-widest text-secondary uppercase">TOTAL</span>
-                    <span class="text-2xl font-headline">145 €</span>
+    <main class="flex-grow flex flex-col lg:flex-row overflow-hidden">
+        <!-- Left Side: Canvas Area -->
+        <section class="w-full lg:w-2/3 bg-[#0e0e0e] flex items-center justify-center relative p-12 overflow-hidden border-r border-outline-variant/20">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 z-0"></div>
+            <div class="relative z-10 w-full max-w-2xl flex flex-col items-center">
+                <img id="main-preview" alt="Watch Preview" class="w-full h-auto object-contain drop-shadow-[0_0_50px_rgba(0,85,255,0.15)] transition-all duration-1000" src="hero.png"/>
+                <div class="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-12">
+                    <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                        <div class="w-2 h-2 rounded-full bg-royal-blue shadow-[0_0_10px_#0055ff]"></div>
+                        <span class="text-[9px] uppercase tracking-widest text-primary [writing-mode:vertical-lr] rotate-180 font-bold">Modèle</span>
+                    </div>
+                    <div class="w-px h-16 bg-outline-variant/30 mx-auto"></div>
+                    <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                        <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+                        <span class="text-[9px] uppercase tracking-widest text-on-surface-variant [writing-mode:vertical-lr] rotate-180 font-bold">Strap</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Right: Customization Controls -->
-        <section class="w-full md:w-1/2 h-full overflow-y-auto px-6 md:px-16 py-12 bg-white">
-            <div class="max-w-lg mx-auto">
-                <div class="mb-12">
-                    <p class="text-[11px] tracking-[0.2em] text-secondary mb-2 uppercase">Personnalisation</p>
-                    <h2 class="text-3xl md:text-4xl font-headline mb-8">Configurez votre bracelet</h2>
-                </div>
-
-                <!-- 1. Model Selection -->
-                <div class="mb-12">
-                    <div class="flex justify-between items-end border-b border-outline-variant/20 pb-2 mb-6">
-                        <h3 class="text-[11px] font-semibold tracking-widest uppercase">1. Votre Modèle</h3>
-                        <span class="text-sm text-secondary">Royal Pop Blue</span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <button class="flex flex-col items-center p-6 border-2 border-royal-blue bg-surface transition-all">
-                            <span class="text-[11px] font-semibold tracking-widest">BLUE EDITION</span>
-                        </button>
-                        <button class="flex flex-col items-center p-6 border border-outline-variant/30 hover:border-royal-blue transition-all">
-                            <span class="text-[11px] font-semibold tracking-widest">ORANGE EDITION</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 2. Material & Color -->
-                <div class="mb-12">
-                    <div class="flex justify-between items-end border-b border-outline-variant/20 pb-2 mb-6">
-                        <h3 class="text-[11px] font-semibold tracking-widest uppercase">2. Matériau & Couleur</h3>
-                        <span class="text-sm text-secondary">Silicone Electric Blue</span>
-                    </div>
-                    <div class="grid grid-cols-3 gap-6">
-                        <button class="flex flex-col items-center gap-3">
-                            <div class="w-14 h-14 rounded-full border-2 border-royal-blue p-1">
-                                <div class="w-full h-full rounded-full bg-royal-blue"></div>
-                            </div>
-                            <span class="text-[10px] font-semibold tracking-widest">BLUE</span>
-                        </button>
-                        <button class="flex flex-col items-center gap-3">
-                            <div class="w-14 h-14 rounded-full border border-outline-variant/30 p-1">
-                                <div class="w-full h-full rounded-full bg-royal-orange"></div>
-                            </div>
-                            <span class="text-[10px] font-semibold tracking-widest">ORANGE</span>
-                        </button>
-                        <button class="flex flex-col items-center gap-3">
-                            <div class="w-14 h-14 rounded-full border border-outline-variant/30 p-1">
-                                <div class="w-full h-full rounded-full bg-white border border-gray-100"></div>
-                            </div>
-                            <span class="text-[10px] font-semibold tracking-widest">WHITE</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 3. Buckle Finish -->
+        <!-- Right Side: Controls Area -->
+        <section class="w-full lg:w-1/3 bg-background flex flex-col p-12 overflow-y-auto scrollbar-hide">
+            <div class="max-w-md mx-auto w-full">
                 <div class="mb-16">
-                    <div class="flex justify-between items-end border-b border-outline-variant/20 pb-2 mb-6">
-                        <h3 class="text-[11px] font-semibold tracking-widest uppercase">3. Finition Boucle</h3>
-                        <span class="text-sm text-secondary">Acier Brossé</span>
-                    </div>
-                    <div class="flex flex-wrap gap-8">
-                        <button class="flex items-center gap-3">
-                            <div class="w-6 h-6 rounded-full border-2 border-royal-blue flex items-center justify-center">
-                                <div class="w-3 h-3 rounded-full bg-gray-300"></div>
-                            </div>
-                            <span class="text-sm">Acier</span>
-                        </button>
-                        <button class="flex items-center gap-3 opacity-50">
-                            <div class="w-6 h-6 rounded-full border border-outline-variant/30 flex items-center justify-center">
-                                <div class="w-3 h-3 rounded-full bg-black"></div>
-                            </div>
-                            <span class="text-sm">Noir Mat</span>
-                        </button>
+                    <span class="text-[10px] font-semibold tracking-[0.3em] uppercase text-royal-blue mb-4 block">Étape 1 / 3</span>
+                    <h1 class="font-display text-4xl text-primary mb-2">Configurez votre Royal Pop</h1>
+                    <p class="text-on-surface-variant font-light">Sélectionnez le boîtier de base pour votre création sur-mesure.</p>
+                </div>
+
+                <!-- Search -->
+                <div class="relative mb-16 group">
+                    <label class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-4 block group-focus-within:text-primary transition-colors">Rechercher une édition</label>
+                    <div class="relative">
+                        <input type="text" class="input-underline w-full text-sm font-light text-primary" placeholder="Ex: Blue Edition, Orange..."/>
+                        <span class="material-symbols-outlined absolute right-0 top-0 text-on-surface-variant">search</span>
                     </div>
                 </div>
 
-                <!-- Action Area -->
-                <div class="pt-8 border-t border-outline-variant/20">
-                    <a href="checkout.html" class="w-full bg-primary text-white py-5 px-10 text-[11px] font-semibold tracking-[0.2em] uppercase hover:bg-royal-blue transition-all duration-500 flex justify-between items-center group">
-                        <span>Finaliser ma commande</span>
-                        <span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                <!-- Model Grid -->
+                <div class="grid grid-cols-2 gap-6 mb-16">
+                    <button class="flex flex-col items-center gap-4 p-8 border-2 border-royal-blue bg-surface-variant/30 group transition-all">
+                        <div class="w-16 h-16 rounded-full overflow-hidden bg-black/40 p-2">
+                            <img src="hero.png" class="w-full h-full object-contain"/>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary text-center">BLUE EDITION</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-4 p-8 border border-outline-variant/30 bg-transparent hover:border-royal-blue/50 group transition-all">
+                        <div class="w-16 h-16 rounded-full overflow-hidden bg-black/20 p-2">
+                            <img src="hero.png" class="w-full h-full object-contain grayscale"/>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant group-hover:text-primary text-center">ORANGE EDITION</span>
+                    </button>
+                </div>
+
+                <!-- Bottom Action -->
+                <div class="mt-auto pt-12 border-t border-outline-variant/20">
+                    <div class="flex justify-between items-end mb-8">
+                        <span class="text-[10px] font-semibold tracking-widest text-on-surface-variant uppercase">ESTIMATION</span>
+                        <span class="font-display text-2xl text-primary">145,00 €</span>
+                    </div>
+                    <a href="checkout.html" class="w-full bg-primary text-on-primary py-5 px-8 text-[11px] font-bold uppercase tracking-[0.2em] flex justify-between items-center group hover:bg-royal-blue hover:text-white transition-all duration-500">
+                        Continuer vers le strap
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
                     </a>
                 </div>
             </div>
