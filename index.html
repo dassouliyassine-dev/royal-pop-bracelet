@@ -1,126 +1,378 @@
-<!DOCTYPE html>
-<html class="dark" lang="fr">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Royal Pop Bracelet - L'art de l'intégration</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary": "#ffffff",
-                        "on-primary": "#131313",
-                        "background": "#131313",
-                        "surface": "#1c1b1b",
-                        "surface-variant": "#2a2a2a",
-                        "on-surface": "#e5e2e1",
-                        "on-surface-variant": "#c4c7c8",
-                        "outline": "#8e9192",
-                        "outline-variant": "#444748",
-                        "royal-blue": "#0055ff",
-                        "royal-orange": "#ff6600"
-                    },
-                    "fontFamily": {
-                        "display": ["Bodoni Moda", "serif"],
-                        "body": ["Inter", "sans-serif"]
-                    },
-                    "spacing": {
-                        "container-max": "1440px",
-                        "section-gap": "160px",
-                        "edge-margin-desktop": "80px",
-                        "edge-margin-mobile": "24px"
-                    }
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#565e74",
+                    "on-surface-variant": "#45464d",
+                    "secondary": "#5c5f61",
+                    "on-background": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f3f3f4",
+                    "on-primary-container": "#7c839b",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#191c1e",
+                    "secondary-fixed-dim": "#c4c7c9",
+                    "on-secondary-fixed-variant": "#444749",
+                    "tertiary-container": "#0b1c30",
+                    "surface-container": "#eeeeee",
+                    "tertiary": "#000000",
+                    "surface-container-high": "#e8e8e8",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary-container": "#75859d",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#bec6e0",
+                    "outline": "#76777d",
+                    "surface-dim": "#dadada",
+                    "on-surface": "#1a1c1c",
+                    "surface-variant": "#e2e2e2",
+                    "primary-container": "#131b2e",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#dae2fd",
+                    "surface": "#f9f9f9",
+                    "secondary-fixed": "#e0e3e5",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#626567",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-fixed": "#d3e4fe",
+                    "inverse-on-surface": "#f0f1f1",
+                    "primary": "#000000",
+                    "on-primary-fixed": "#131b2e",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "secondary-container": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+
+        /* Carousel 3D Styles */
+        .carousel-container {
+            perspective: 1500px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            position: absolute;
+            width: 400px;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.05));
+            user-select: none;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .carousel-item.active {
+            transform: translate3d(0, 0, 0) scale(1.2);
+            z-index: 10;
+            opacity: 1;
+            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.15));
+        }
+
+        .carousel-item.left {
+            transform: translate3d(-350px, 0, -300px) rotateY(45deg) scale(0.8);
+            z-index: 5;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .carousel-item.right {
+            transform: translate3d(350px, 0, -300px) rotateY(-45deg) scale(0.8);
+            z-index: 5;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .carousel-item.hidden-left {
+            transform: translate3d(-600px, 0, -500px) rotateY(90deg) scale(0.5);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .carousel-item.hidden-right {
+            transform: translate3d(600px, 0, -500px) rotateY(-90deg) scale(0.5);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .nav-btn {
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+
+        .nav-btn:hover {
+            background: black;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container { height: 400px; }
+            .carousel-item { width: 280px; }
+            .carousel-item.left { transform: translate3d(-150px, 0, -200px) scale(0.7); }
+            .carousel-item.right { transform: translate3d(150px, 0, -200px) scale(0.7); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-background dark:bg-background border-b border-outline-variant dark:border-on-surface-variant z-50">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-gutter">
+<span class="material-symbols-outlined cursor-pointer transition-opacity active:opacity-70 text-primary dark:text-on-background" data-icon="menu">menu</span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2">
+<h1 class="font-headline-md text-headline-md tracking-widest text-primary dark:text-on-background">ROYAL POP WRISTBANDS</h1>
+</div>
+<div class="flex items-center gap-gutter">
+<span class="material-symbols-outlined cursor-pointer transition-opacity active:opacity-70 text-primary dark:text-on-background" data-icon="shopping_bag">shopping_bag</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 md:pt-32 pb-section-gap">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">The Essential Wristband</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-md">Precision crafted for the modern individual. A testament to quiet luxury and enduring craftsmanship.</p>
+<button class="bg-primary text-on-primary px-10 py-4 font-label-sm text-label-sm tracking-widest hover:opacity-90 transition-opacity">
+                        SHOP THE COLLECTION
+                    </button>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<div class="bg-surface-container aspect-[4/5] overflow-hidden">
+<img alt="Luxury wristband" class="w-full h-full object-cover grayscale mix-blend-multiply opacity-90" data-alt="A professional studio photograph of a single, premium matte black wristband resting on a textured light grey stone surface. The lighting is soft and directional, casting subtle shadows that highlight the elegant, clean lines of the design. The overall aesthetic is minimalist and high-end, featuring a neutral color palette of greys and blacks consistent with quiet luxury. The composition is centered, conveying a sense of balance and sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1d69wDdRd1_xDJgU0pzn_teyRNC6FZc1QImReikJ5uTTrbBvX445lsRV0bVjOzXelk8GZfeB3S9OdN6y3oWkH8wt9iwPlx4sxlyUe0n7XnOkpUlBaUCKwVAu7dB60h4rOYh61wPWRi79N-9W5YqqwkXcGkAuGhLEI7c5czPB70LBVChregZ2tdT_OVNqfywGbgnYIXUybLorG_ZQBWQW6i3h6K-Br6JpBlYGKWCtfC82mrPFrUnHwnmKT8nYWzyTmvFrEMyilJZM">
+</div>
+</div>
+</div>
+</section>
+<!-- Product Features -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="verified">verified</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Durable Material</h3>
+<p class="font-body-md text-body-md text-secondary max-w-xs">Engineered from architectural-grade fluoroelastomer for lifelong resilience.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="linear_scale">linear_scale</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Adjustable Fit</h3>
+<p class="font-body-md text-body-md text-secondary max-w-xs">Features a precision pin-and-tuck closure for a seamless, tailored experience.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Minimalist Design</h3>
+<p class="font-body-md text-body-md text-secondary max-w-xs">Stripped of all excess. Form and function in perfect, understated harmony.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Collection Carousel -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden">
+<div class="flex flex-col items-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">The Collection</h2>
+<div class="h-px w-12 bg-primary"></div>
+</div>
+
+<div class="relative max-w-6xl mx-auto px-4">
+    <div class="carousel-container" id="carousel">
+        <div class="carousel-item" data-index="0">
+            <img alt="Royal Pop Black/Silver" src="watch-custom.jpg">
+        </div>
+        <div class="carousel-item" data-index="1">
+            <img alt="Royal Pop Red" src="watch-red.png">
+        </div>
+        <div class="carousel-item" data-index="2">
+            <img alt="Royal Pop Green" src="watch-green.png">
+        </div>
+        <div class="carousel-item" data-index="3">
+            <img alt="Royal Pop Purple" src="watch-purple.png">
+        </div>
+        <div class="carousel-item" data-index="4">
+            <img alt="Royal Pop White" src="watch-white.png">
+        </div>
+        <div class="carousel-item" data-index="5">
+            <img alt="Royal Pop Pink" src="watch-pink.png">
+        </div>
+        <div class="carousel-item" data-index="6">
+            <img alt="Royal Pop Cyan" src="watch-cyan.png">
+        </div>
+        <div class="carousel-item" data-index="7">
+            <img alt="Royal Pop Navy" src="watch-navy.png">
+        </div>
+    </div>
+
+    <!-- Nav Controls -->
+    <div class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-12 z-30">
+        <button class="nav-btn" id="prevBtn">
+            <span class="material-symbols-outlined">arrow_back_ios_new</span>
+        </button>
+    </div>
+    <div class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-12 z-30">
+        <button class="nav-btn" id="nextBtn">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </button>
+    </div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-background py-section-gap border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-8">Refined for the everyday.</h2>
+<button class="border border-primary text-primary px-12 py-5 font-label-sm text-label-sm tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    SHOP THE COLLECTION
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-background dark:bg-background border-t border-outline-variant dark:border-on-surface-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h3 class="font-headline-md text-headline-md text-primary">ROYAL POP WRISTBANDS</h3>
+<p class="font-label-sm text-label-sm text-secondary">© 2024 ROYAL POP WRISTBANDS. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-200 underline-offset-4 hover:underline" href="#">COLLECTIONS</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-200 underline-offset-4 hover:underline" href="#">CRAFTSMANSHIP</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-200 underline-offset-4 hover:underline" href="#">CARE</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-200 underline-offset-4 hover:underline" href="#">STORES</a>
+</div>
+<div class="flex gap-6 mt-8 md:mt-0">
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer transition-colors" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+
+<script>
+    const carousel = document.getElementById('carousel');
+    const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        items.forEach((item, index) => {
+            item.classList.remove('active', 'left', 'right', 'hidden-left', 'hidden-right');
+            
+            const position = (index - currentIndex + items.length) % items.length;
+            
+            if (position === 0) {
+                item.classList.add('active');
+            } else if (position === 1) {
+                item.classList.add('right');
+            } else if (position === items.length - 1) {
+                item.classList.add('left');
+            } else {
+                // For more than 3 items, split the rest into hidden-right and hidden-left
+                if (position > 1 && position <= items.length / 2) {
+                    item.classList.add('hidden-right');
+                } else {
+                    item.classList.add('hidden-left');
                 }
             }
-        }
-    </script>
-    <style>
-        body { background-color: #131313; color: #e5e2e1; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-    </style>
-</head>
-<body class="font-body antialiased">
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/30">
-        <div class="max-w-container-max mx-auto px-edge-margin-mobile md:px-edge-margin-desktop flex justify-between items-center h-20">
-            <a class="font-display text-2xl md:text-3xl tracking-tighter text-primary uppercase" href="index.html">ROYAL POP</a>
-            <nav class="hidden md:flex items-center space-x-12">
-                <a class="text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="index.html">Collections</a>
-                <a class="text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="configurator.html">Configurateur</a>
-                <a class="text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors" href="#">Savoir-faire</a>
-            </nav>
-            <div class="flex items-center gap-6">
-                <button class="text-primary hover:scale-110 transition-transform"><span class="material-symbols-outlined">search</span></button>
-                <button class="text-primary hover:scale-110 transition-transform"><span class="material-symbols-outlined">shopping_bag</span></button>
-            </div>
-        </div>
-    </header>
+        });
+    }
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            <div class="absolute inset-0 z-0">
-                <img alt="Royal Pop Watch Macro" class="w-full h-full object-cover opacity-60" src="hero.png"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
-            </div>
-            <div class="relative z-10 text-center px-edge-margin-mobile md:px-edge-margin-desktop max-w-container-max mx-auto mt-20">
-                <span class="text-[10px] font-semibold tracking-[0.4em] uppercase text-royal-blue mb-6 block">Édition Limitée AP x Swatch</span>
-                <h1 class="font-display text-4xl md:text-7xl text-primary mb-10 max-w-4xl mx-auto uppercase leading-tight">
-                    L'Art du Bracelet Intégré.
-                </h1>
-                <p class="text-lg text-on-surface-variant max-w-xl mx-auto mb-12 font-light">
-                    Redéfinissez votre Royal Pop avec nos bracelets sur-mesure. Une fusion entre précision technique et esthétique explosive.
-                </p>
-                <a class="inline-block bg-primary text-on-primary text-[11px] font-bold px-10 py-5 uppercase tracking-[0.2em] hover:bg-royal-blue hover:text-white transition-all duration-500 border border-primary" href="configurator.html">
-                    Ouvrir le Configurateur
-                </a>
-            </div>
-        </section>
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    });
 
-        <!-- Features Section -->
-        <section class="py-section-gap px-edge-margin-mobile md:px-edge-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-                <div class="space-y-8">
-                    <span class="text-[10px] font-semibold tracking-[0.3em] uppercase text-secondary">Matériaux d'exception</span>
-                    <h2 class="font-display text-3xl md:text-5xl text-primary leading-tight">Le Silicone, Réinventé.</h2>
-                    <p class="text-on-surface-variant leading-relaxed font-light">
-                        Nos bracelets sont injectés dans un silicone de grade médical haute densité, offrant une résistance aux UV et une souplesse incomparable. Chaque courbe est étudiée pour s'intégrer parfaitement au boîtier iconique de la Royal Pop.
-                    </p>
-                    <div class="pt-4">
-                        <a class="inline-flex items-center gap-4 text-[11px] font-bold uppercase tracking-widest text-primary group" href="#">
-                            Découvrir la technologie
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="relative aspect-square">
-                    <img alt="Blue Strap Detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="blue-strap.png"/>
-                </div>
-            </div>
-        </section>
-    </main>
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+    });
 
-    <footer class="bg-surface/30 border-t border-outline-variant/20 py-20 mt-20">
-        <div class="max-w-container-max mx-auto px-edge-margin-mobile md:px-edge-margin-desktop flex flex-col md:flex-row justify-between items-start gap-12">
-            <div>
-                <h3 class="font-display text-2xl text-primary mb-4">ROYAL POP</h3>
-                <p class="text-[10px] font-semibold tracking-widest text-on-surface-variant uppercase">
-                    © 2024 ROYAL POP ATELIER. PRECISION ENGINEERED.
-                </p>
-            </div>
-            <nav class="flex flex-wrap gap-8">
-                <a class="text-[10px] font-semibold tracking-widest text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">Collections</a>
-                <a class="text-[10px] font-semibold tracking-widest text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">Configurateur</a>
-                <a class="text-[10px] font-semibold tracking-widest text-on-surface-variant hover:text-primary transition-colors uppercase" href="#">Legal</a>
-            </nav>
-        </div>
-    </footer>
-</body>
-</html>
+    // Initialize
+    updateCarousel();
+</script>
+
+</body></html>
