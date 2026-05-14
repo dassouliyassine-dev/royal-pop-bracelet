@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Royal Pop Bracelet - L'élégance Pop au poignet</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-container": "#858383",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "inverse-primary": "#c9c6c5",
+                        "primary": "#000000",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-variant": "#e3e2e0",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadad8",
+                        "on-primary-fixed-variant": "#474646",
+                        "tertiary-container": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-surface-variant": "#444748",
+                        "secondary-container": "#e4e2e1",
+                        "on-tertiary-container": "#838484",
+                        "surface": "#faf9f7",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c7",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e3e2e2",
+                        "surface-container-high": "#e9e8e6",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-background": "#1a1c1b",
+                        "on-secondary-container": "#656464",
+                        "background": "#faf9f7",
+                        "secondary": "#5f5e5e",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#1c1b1b",
+                        "surface-container-low": "#f4f3f1",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-bright": "#faf9f7",
+                        "secondary-fixed": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#efeeec",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "tertiary": "#000000",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "royal-blue": "#0055ff",
+                        "royal-orange": "#ff6600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", { "lineHeight": "34px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-royal-blue/20 selection:text-primary">
+    <!-- Header -->
+    <header class="bg-surface border-b border-outline-variant/20 sticky top-0 z-50">
+        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+            <button class="text-secondary hover:text-primary transition-colors duration-300 ease-in-out">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tighter text-primary" href="/">
+                ROYAL POP
+            </a>
+            <button class="text-secondary hover:text-primary transition-colors duration-300 ease-in-out">
+                <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden bg-surface-container-lowest">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <img alt="Royal Pop Watch Detail" class="w-full h-full object-cover object-center mix-blend-multiply" src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=2070&auto=format&fit=crop"/>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto space-y-8">
+                <span class="font-label-caps text-label-caps text-royal-blue tracking-[0.3em] uppercase">AP x Swatch Exclusive</span>
+                <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary tracking-tight">
+                    L'élégance Pop au poignet.
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
+                    Sublimez votre Royal Pop avec nos bracelets sur-mesure. Une fusion entre haute horlogerie et esprit Pop, conçus pour durer.
+                </p>
+                <div class="pt-8">
+                    <a class="inline-flex items-center justify-center px-10 py-5 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest hover:bg-royal-blue transition-all duration-500 ease-in-out" href="configurator.html">
+                        Personnaliser mon bracelet
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Savoir-faire Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 md:col-start-2 space-y-6 order-2 md:order-1">
+                    <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Innovation</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Précision et Vibrance</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Nos bracelets sont spécialement étudiés pour s'adapter au boîtier unique de la Royal Pop. Chaque pièce est injectée dans un silicone de haute densité ou découpée dans des cuirs techniques, offrant une résistance et un confort exceptionnels pour votre quotidien.
+                    </p>
+                    <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-royal-blue hover:border-royal-blue transition-colors duration-300 mt-4" href="#">
+                        Notre technologie
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="md:col-span-5 md:col-start-8 order-1 md:order-2">
+                    <div class="relative aspect-[3/4] bg-surface-container-low overflow-hidden">
+                        <img alt="Strap detail" class="w-full h-full object-cover filter brightness-90 hover:brightness-100 transition-all duration-700" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Highlights -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface-container-lowest">
+            <div class="text-center mb-16 space-y-4">
+                <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">La Collection</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Des couleurs explosives</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px]">
+                <div class="md:col-span-8 row-span-2 relative group overflow-hidden bg-surface-container-low">
+                    <img alt="Blue Silicone Strap" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=2070&auto=format&fit=crop"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <div class="space-y-2 text-white">
+                            <h3 class="font-headline-md text-headline-md">Blue Electric Silicone</h3>
+                            <p class="font-body-md opacity-80 max-w-md">L'accord parfait pour le cadran "Bleu Nuit". Résistant à l'eau et aux UV.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-4 row-span-1 relative group overflow-hidden bg-surface-container-low">
+                    <img alt="Orange Strap" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1510017803434-a899398421b3?q=80&w=2070&auto=format&fit=crop"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <h3 class="font-headline-md text-[20px] leading-tight text-white">Pop Orange Edition</h3>
+                    </div>
+                </div>
+                <div class="md:col-span-4 row-span-1 relative group overflow-hidden bg-surface-container-low">
+                    <img alt="White Strap" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?q=80&w=1935&auto=format&fit=crop"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                        <h3 class="font-headline-md text-[20px] leading-tight text-white">Pure White Technical</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-surface border-t border-outline-variant/20">
+        <div class="flex flex-col md:flex-row justify-between items-center py-16 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto gap-gutter">
+            <span class="font-body-md text-body-md text-secondary">
+                © 2024 ROYAL POP BRACELET. TOUS DROITS RÉSERVÉS.
+            </span>
+            <nav class="flex flex-wrap justify-center gap-8">
+                <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="#">COLLECTIONS</a>
+                <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="#">SAVOIR-FAIRE</a>
+                <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors duration-300" href="#">CONTACT</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
